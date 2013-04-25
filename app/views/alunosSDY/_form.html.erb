@@ -1,0 +1,41 @@
+<%= form_for(@aluno) do |f| %>
+  <% if @aluno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aluno.errors.count, "error") %> prohibited this aluno from being saved:</h2>
+
+      <ul>
+      <% @aluno.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nome %><br />
+    <%= f.text_field :Nome %>
+  </div>
+  <div class="field">
+    <%= f.label :Fone %><br />
+    <%= f.text_field :Fone %>
+  </div>
+  <div class="field">
+    <%= f.label :Nascimento %><br />
+    <%= f.date_select(:Nascimento,:start_year => Time.now.year - 100, :end_year => Time.now.year , :use_month_numbers => true) %>
+  </div>
+  <div class="field">
+    <%= f.label :Batismo %><br />
+    <%= f.date_select(:Batismo, :start_year => Time.now.year - 100, :end_year => Time.now.year , :use_month_numbers => true)  %>
+  </div>
+  <div class="field">
+    <%= f.label :Email %><br />
+    <%= f.text_field :Email %>
+  </div>
+  <div class="field">
+    <%= f.label :Endereco %><br />
+    <%= f.text_area :Endereco %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

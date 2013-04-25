@@ -1,0 +1,105 @@
+pt:
+  netzke:
+    basepack:
+      grid:
+        actions:
+          add:
+            text: Adicionar
+            tooltip: Adicionar
+          edit:
+            text: Editar
+            tooltip: Editar
+          del:
+            text: Deletar
+            tooltip: Deletar
+          apply:
+            text: Aplicar
+            tooltip: Aplicar
+          add_in_form:
+            text: Adicionar em Formulário
+          edit_in_form:
+            text: Editar em Formulário
+          search:
+            text: Pesquisar
+            tooltip: Pesquisar
+
+        deleted_n_records: "Deletar %{n} registro(s)"
+        cannot_delete: "Você não tem permissão para excluir dados"
+        confirmation: Confirmação
+        are_you_sure: Você tem certeza?
+
+      record_form_window:
+        actions:
+          ok:
+            text: OK
+          cancel:
+            text: Cancelar
+
+      search_window:
+        title: Pesquisa Avançada
+        actions:
+          search:
+            text: Pesquisar
+            tooltip: Pesquisar
+          cancel:
+            text: Cancelar
+            tooltip: Cancelar
+
+      form:
+        actions:
+          edit:
+            text: Editar
+            tooltip: Editar
+          cancel:
+            text: Cancelar
+            tooltip: Cancelar a edição
+          apply:
+            text: Aplicar
+            tooltip: Aplicar mudanças
+
+      search_panel:
+        presets: Predefinição
+        equals: Igual
+        greater_than: Maior que
+        less_than: Menor que
+        contains: Contem
+        matches: Corresponde
+        date_equals: "On"
+        before: Antes
+        after: Depois
+
+      paging_form:
+        actions:
+          search:
+            text: Perquisar
+            tooltip: Pesquisa avançada
+
+      query_builder:
+        presets: Predefinicão
+        preset_saved: Predefinição salva com sucesso
+        preset_deleted: Predefinição deletada com sucesso
+        overwrite_confirm: "Tem certeza de que deseja substituir predefinição '{0}'?"
+        overwrite_confirm_title: "Substituindo predefinição"
+        delete_confirm: "Tem certeza de que deseja deletar predefinição '{0}'?"
+        delete_confirm_title: "Deletando predefinição"
+        actions:
+          clear_all:
+            text: Limpar
+            tooltip: Limpar todas condições
+          reset:
+            text: Resetar
+            tooltip: Restar valores das condicões
+          save_preset:
+            text: Salvar predefinição
+            tooltip: Salvar predefinição
+          delete_preset:
+            text: Deletar predefinição
+            tooltip: Deletar predefinição
+          apply:
+            text: Aplicar
+            tooltip: Aplicar condições atualizadas
+
+    formats:
+      date: d/m/Y
+      datetime: d/m/Y H:i:s
+      time: H:i:s
