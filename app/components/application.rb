@@ -40,7 +40,7 @@ class Application < Netzke::Basepack::Viewport
           { region: :west, item_id: :navigation, width: 300, split: true, xtype: :treepanel, root: menu, root_visible: false, title: "Controle" },
           { region: :center, layout: :border, border: false, items: [
             { item_id: :info_panel, region: :north, height: 35, body_padding: 5, split: true, html: initial_html },
-            { item_id: :main_panel, region: :center, layout: :fit, border: false, items: [{body_padding: 5, html: "Nessa area aparecerá o item selecionado!!!"}] } # items is only needed here for cosmetic reasons (initial border)
+            { item_id: :main_panel, region: :center, layout: :fit, border: false, items: [{body_padding: 5, html: "Nessa area aparecera o item selecionado!!!"}] } # items is only needed here for cosmetic reasons (initial border)
           ]}
         ]
       }
