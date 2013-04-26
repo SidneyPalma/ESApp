@@ -266,7 +266,7 @@ protected
     }
 
     if current_user
-      out[:children] << { text: "Componente privado", expanded: true, children: [ leaf("Para Usuários autenticados", :for_authenticated, :lock) ]}
+      out[:children] << { text: "Componente privado", expanded: true, children: [ leaf("Para Usuarios autenticados", :for_authenticated, :lock) ]}
     end
 
     out
