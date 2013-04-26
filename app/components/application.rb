@@ -99,7 +99,7 @@ class Application < Netzke::Basepack::Viewport
 
   component :unidades do |c|
     c.title  = "Unidades"
-    c.desc = "Unidades de Ação"
+    c.desc = "Unidades de Acao"
   end
 
   component :alunos do |c|
