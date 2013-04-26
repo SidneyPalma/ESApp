@@ -27,7 +27,7 @@ class Alunos < Netzke::Basepack::Grid
        :width => 300
       },
       { :name => :unidade__nome,
-        :header => "Unid. Ação"
+        :header => "Unid. Acao"
       }
     ]    
   end

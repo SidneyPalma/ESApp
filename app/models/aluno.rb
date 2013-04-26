@@ -27,7 +27,7 @@ class Aluno < ActiveRecord::Base
       if batismo != nil 
         'Sim'
       else
-        'Não'
+        'Nao'
       end    
     end
         
