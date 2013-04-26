@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.13'
 
@@ -41,3 +41,5 @@ gem 'rails-i18n'
 
 gem 'netzke-core', '~>0.8.0'
 gem 'netzke-basepack', '~>0.8.0'
+
+gem 'unicorn'
