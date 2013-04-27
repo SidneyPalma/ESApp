@@ -7,7 +7,10 @@ class Unidades < Netzke::Basepack::Grid
       :nome,
       { :name => :tipoclasse__sigla,
         :header => "Tipo Classe"
-      }
+      },
+      :professor,
+      :associado,
+      :secretario
     ]            
   end
   
