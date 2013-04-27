@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  timestre_id: 1
+  unidade_id: 1
+  aluno_id: 1
+  sab01: false
+  sab02: false
+  sab03: false
+  sab04: false
+  sab05: false
+  sab06: false
+  sab07: false
+  sab08: false
+  sab09: false
+  sab10: false
+  sab11: false
+  sab12: false
+  sab13: false
+  sab14: false
+
+two:
+  timestre_id: 1
+  unidade_id: 1
+  aluno_id: 1
+  sab01: false
+  sab02: false
+  sab03: false
+  sab04: false
+  sab05: false
+  sab06: false
+  sab07: false
+  sab08: false
+  sab09: false
+  sab10: false
+  sab11: false
+  sab12: false
+  sab13: false
+  sab14: false

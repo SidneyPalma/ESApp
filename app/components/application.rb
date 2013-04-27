@@ -106,7 +106,19 @@ class Application < Netzke::Basepack::Viewport
     c.title  = "Alunos"
     c.desc = "Alunos"
   end
-   
+
+  component :trimestres do |c|
+    c.title  = "Trimestres"
+    c.desc = "Trimestres"
+  end
+
+  component :perguntas do |c|
+    c.title  = "Perguntas"
+    c.desc = "Perguntas"
+  end
+  
+
+###
   component :tipoclasses_com_unidades do |c|
     c.title  = "Tipoclasses com Unidades"
     c.desc = "Tipo deClasse e Unidades"
@@ -117,6 +129,16 @@ class Application < Netzke::Basepack::Viewport
     c.desc = "Unidades com Alunos"
   end
 
+  component :apontamentos do |c|
+    c.title  = "Apontamentos"
+    c.desc = "Apontamentos"
+  end
+
+  component :respostas do |c|
+    c.title  = "Respostas"
+    c.desc = "Respostas"
+  end  
+  
 #
 #  component :static_tab_panel do |c|
 #    c.desc = "A TabPanel with pre-loaded tabs (as opposed to dynamically loaded components). " + source_code_link(c)
@@ -227,6 +249,8 @@ protected
                 leaf("Tipo Classe", :tipoclasses, :user_suit),
                 leaf("Unidades", :unidades, :user),
                 leaf("Alunos", :alunos, :user),
+                leaf("Trimestres", :trimestres, :user),
+                leaf("Perguntas", :perguntas, :user),
 #                leaf("Grid with persistent columns", :grid_with_persistent_columns, :user_suit)
               ]
             },
@@ -256,7 +280,10 @@ protected
             #leaf("Bosses and Clerks", :bosses_and_clerks, :user_user_suit),
             leaf("Tipo Classes e Unidades", :tipoclasses_com_unidades, :user_user_suit),
             leaf("Unidades e Alunos", :unidades_com_alunos, :user_user_suit),
-#            leaf("TabPanel (static)", :static_tab_panel, :bullet_black),
+            leaf("Apontamentos", :apontamentos, :user_user_suit),
+            leaf("Respostas", :respostas, :user_user_suit)
+
+#            leaf("TabPanel (static)", :static_tab_panel, :bullet_black),#            
 #            leaf("TabPanel (dynamic)", :dynamic_tab_panel, :bullet_black),
 #            leaf("Accordion (static)", :static_accordion, :bullet_black),
 #            leaf("Accordion (dynamic)", :dynamic_accordion, :bullet_black)

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trimestre: MyString
+  ano: 1
+  trim: 1
+  qtde_sabados: 1
+
+two:
+  trimestre: MyString
+  ano: 1
+  trim: 1
+  qtde_sabados: 1
