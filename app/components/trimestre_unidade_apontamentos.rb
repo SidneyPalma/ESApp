@@ -99,8 +99,8 @@ class TrimestreUnidadeApontamentos < Netzke::Base
     c.columns = [
       { :name => "aluno__nome",
         :header => "Aluno",
-        :width => 300 ,
-        :scope => ["unidade_id = ?", component_session[:selected_unidade_id] ]
+        :width => 300 #,
+        #:scope => ["unidade_id = ?", component_session[:selected_unidade_id] ]
         #:scope => {:unidade_id.eq => :component_session[:selected_unidade_id] }
       },
       
