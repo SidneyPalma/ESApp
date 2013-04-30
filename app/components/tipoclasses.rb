@@ -7,7 +7,7 @@ class Tipoclasses < Netzke::Basepack::Grid
       :descricao,
       :idadede,
       :idadeate
-    ]    
+    ]       
   end
   
 end

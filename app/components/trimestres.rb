@@ -6,8 +6,15 @@ class Trimestres < Netzke::Basepack::Grid
       :trimestre,
       :ano,  
       :trim,
-      :qtde_sabados
-    ]    
+      :qtde_sabados,
+      :ativo
+    ]
+    c.data_store.sorters = [{ property: 'trimestre', direction: 'ASC' }]
   end
+  
+#  def default_bbar
+#    res = []
+#    res
+#  end
   
 end

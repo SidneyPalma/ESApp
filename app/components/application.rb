@@ -104,7 +104,7 @@ class Application < Netzke::Basepack::Viewport
 
   component :alunos do |c|
     c.title  = "Alunos"
-    c.desc = "Alunos"
+    c.desc = "Alunos"    
   end
 
   component :trimestres do |c|
@@ -137,7 +137,12 @@ class Application < Netzke::Basepack::Viewport
   component :respostas do |c|
     c.title  = "Respostas"
     c.desc = "Respostas"
-  end  
+  end    
+  
+  component :trimestre_unidade_apontamentos do |c|
+    c.title  = "Unidades/Apontamento"
+    c.desc = "Unidades/Apontamento"
+  end
   
 #
 #  component :static_tab_panel do |c|
@@ -185,7 +190,7 @@ class Application < Netzke::Basepack::Viewport
       this.netzke_set_result(true)
     else
       this.netzke_set_result(false)
-      this.netzke_feedback("Wrong credentials")
+      this.netzke_feedback("Credenciais erradas")
     end
   end
 
@@ -250,7 +255,9 @@ protected
                 leaf("Unidades", :unidades, :user),
                 leaf("Alunos", :alunos, :user),
                 leaf("Trimestres", :trimestres, :user),
-                leaf("Perguntas", :perguntas, :user),
+                leaf("Apontamentos", :apontamentos, :user_user_suit),
+                leaf("Perguntas", :perguntas, :user),            
+                leaf("Respostas", :respostas, :user)
 #                leaf("Grid with persistent columns", :grid_with_persistent_columns, :user_suit)
               ]
             },
@@ -280,8 +287,7 @@ protected
             #leaf("Bosses and Clerks", :bosses_and_clerks, :user_user_suit),
             leaf("Tipo Classes e Unidades", :tipoclasses_com_unidades, :user_user_suit),
             leaf("Unidades e Alunos", :unidades_com_alunos, :user_user_suit),
-            leaf("Apontamentos", :apontamentos, :user_user_suit),
-            leaf("Respostas", :respostas, :user_user_suit)
+            leaf("Unidades/Apontamentos", :trimestre_unidade_apontamentos, :user_user_suit)
 
 #            leaf("TabPanel (static)", :static_tab_panel, :bullet_black),#            
 #            leaf("TabPanel (dynamic)", :dynamic_tab_panel, :bullet_black),

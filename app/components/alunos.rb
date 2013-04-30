@@ -2,6 +2,7 @@ class Alunos < Netzke::Basepack::Grid
   def configure(c)
     super
     c.model = "Aluno"	
+    
     c.columns = [
       #:pathSdy,
       {:name => :nome,
@@ -29,7 +30,8 @@ class Alunos < Netzke::Basepack::Grid
       { :name => :unidade__nome,
         :header => "Unid. Acao"
       }
-    ]    
+    ]
+    c.data_store.sorters = [{ property: 'nome', direction: 'ASC' }]
   end
   
 end

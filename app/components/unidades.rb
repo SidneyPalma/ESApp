@@ -11,7 +11,7 @@ class Unidades < Netzke::Basepack::Grid
       :professor,
       :associado,
       :secretario
-    ]            
-  end
-  
+    ]
+    c.data_store.sorters = [{ property: 'nome', direction: 'ASC' }]
+  end  
 end

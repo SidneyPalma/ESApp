@@ -42,8 +42,23 @@ class TipoclassesComUnidades < Netzke::Base
   end
 
   component :unidades do |c|
-    c.klass = Unidades
-    c.data_store = {auto_load: false}
+    c.klass = Netzke::Basepack::Grid #Unidades
+    c.model = "Unidade"
+    
+    c.columns = [
+      :nome,
+      { :name => :tipoclasse__sigla,
+        :header => "Tipo Classe"
+      },
+      :professor,
+      :associado,
+      :secretario
+    ]    
+    
+    c.data_store = {
+      auto_load: false,
+      sorters: [{ property: 'nome', direction: 'ASC' }]
+      }
     c.scope = {:tipoclasse_id => component_session[:selected_tipoclasse_id]}
     c.strong_default_attrs = {:tipoclasse_id => component_session[:selected_tipoclasse_id]}
   end
