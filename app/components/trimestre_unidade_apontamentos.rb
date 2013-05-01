@@ -110,21 +110,16 @@ class TrimestreUnidadeApontamentos < Netzke::Base
       :unidade_id => component_session[:selected_unidade_id]      
     }
     
-    
-#    c.trimestre_id = component_session[:selected_trimestre_id]
-#    c.unidade_id = component_session[:selected_unidade_id]
-     c.strong_default_attrs = {
-       :trimestre_id => component_session[:selected_trimestre_id],
-       :unidade_id => component_session[:selected_unidade_id]       
-     }
+    c.strong_default_attrs = {
+      :trimestre_id => component_session[:selected_trimestre_id],
+      :unidade_id => component_session[:selected_unidade_id]       
+    }
  
     c.columns = [
       { :name => "aluno__nome",
         :header => "Aluno",
         :width => 300 ,
         :scope => ["alunos.unidade_id = #{component_session[:selected_unidade_id]}" ] 
-        #:scope => ["unidade_id = ?", :component_session[:selected_unidade_id]  ]
-        #:scope => {:unidade_id.eq => :component_session[:selected_unidade_id] }
       },
       
       :sab01, 
@@ -182,8 +177,11 @@ class TrimestreUnidadeApontamentos < Netzke::Base
       :unidade_id => component_session[:selected_unidade_id]      
     }
 
-    #c.trimestre_id = component_session[:selected_trimestre_id]
-    #c.unidade_id = component_session[:selected_unidade_id]
+    c.strong_default_attrs = {
+      :trimestre_id => component_session[:selected_trimestre_id],
+      :unidade_id => component_session[:selected_unidade_id]       
+    }
+
     
   end
   
