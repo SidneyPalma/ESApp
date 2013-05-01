@@ -26,22 +26,26 @@ class TrimestreUnidadeApontamentos < Netzke::Base
         this.callParent();
 
         // setting the 'rowclick' event
+        //var view = nil
         var view = this.getComponent('unidades').getView();   
         view.on('itemclick', function(view, record){
           this.selectUnidade({unidade_id: record.get('id')});
           
           this.getComponent('apontamentos').getStore().load();
+
           this.getComponent('respostas').getStore().load();
 
         }, this);
 
         // setting the 'rowclick' event
+        //var view = nil
         var view = this.getComponent('trimestres').getView();   
         view.on('itemclick', function(view, record){
           // The beauty of using Ext.Direct: calling 3 endpoints in a row, which results in a single call to the server!
           this.selectTrimestre({trimestre_id: record.get('id')});
           
           this.getComponent('apontamentos').getStore().load();
+
           this.getComponent('respostas').getStore().load();
 
         }, this);
@@ -96,11 +100,30 @@ class TrimestreUnidadeApontamentos < Netzke::Base
     c.klass = Netzke::Basepack::Grid #Apontamentos
     c.model = "Apontamento"
     c.persistence = true 
+    c.data_store = {
+      :auto_load => false,
+      :sorters => [{:property => 'aluno__nome', :direction => 'ASC' }]
+    }
+    
+    c.scope = {
+      :trimestre_id => component_session[:selected_trimestre_id],
+      :unidade_id => component_session[:selected_unidade_id]      
+    }
+    
+    
+#    c.trimestre_id = component_session[:selected_trimestre_id]
+#    c.unidade_id = component_session[:selected_unidade_id]
+     c.strong_default_attrs = {
+       :trimestre_id => component_session[:selected_trimestre_id],
+       :unidade_id => component_session[:selected_unidade_id]       
+     }
+ 
     c.columns = [
       { :name => "aluno__nome",
         :header => "Aluno",
-        :width => 300 #,
-        #:scope => ["unidade_id = ?", component_session[:selected_unidade_id] ]
+        :width => 300 ,
+        :scope => ["alunos.unidade_id = #{component_session[:selected_unidade_id]}" ] 
+        #:scope => ["unidade_id = ?", :component_session[:selected_unidade_id]  ]
         #:scope => {:unidade_id.eq => :component_session[:selected_unidade_id] }
       },
       
@@ -120,19 +143,7 @@ class TrimestreUnidadeApontamentos < Netzke::Base
       :sab14       
     ]
     
-    c.data_store = {auto_load: false}
     
-    c.scope = {
-      :trimestre_id => component_session[:selected_trimestre_id],
-      :unidade_id => component_session[:selected_unidade_id]      
-    }
-    
-#    c.trimestre_id = component_session[:selected_trimestre_id]
-#    c.unidade_id = component_session[:selected_unidade_id]
-     c.strong_default_attrs = {
-       :trimestre_id => component_session[:selected_trimestre_id],
-       :unidade_id => component_session[:selected_unidade_id]       
-     }
   end
   
   component :respostas do |c|
